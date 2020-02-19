@@ -14,11 +14,14 @@ Some of the community videos: https://www.youtube.com/playlist?list=PLp5v7U2tXHs
 * Documentation: https://spotmicroai.readthedocs.io
 * Forum http://spotmicroai.org/
 
-This is the repository for nVIDIA Jetson Nano code of SpotMicro project.
+This is the repository for simulation code, usually in combination with nVIDIA Jetson Nano board, of SpotMicro project.
 
 In here you can find all the project repositories: **https://gitlab.com/custom_robots/spotmicro**
 
-# nVIDIA Jetson Nano code repository of SpotMicro project
+# Simulation code repository of SpotMicro project
+
+Note before you move one, this repo contains an initial step for the simulation in the platform created by Florian Wilk, but there are more project collaborators maintaining their own repos with different solutions:
+* Nicola Russo: https://github.com/nicrusso7/rex-gym
 
 ## Abstract:
 The SpotMicroAI project is designed to be a low cost, easily built quadruped robot. The design is roughly based off of Boston Dynamics quadruped robot SpotMini, though with obvious adaptations such as size and sensor suite.
