@@ -20,7 +20,8 @@ In here you can find all the project repositories: **https://gitlab.com/custom_r
 
 # Simulation code repository of SpotMicro project
 
-Note before you move one, this repo contains an initial step for the simulation in the platform created by Florian Wilk, but there are more project collaborators maintaining their own repos with different solutions, explore the different folders!
+Note before you move one, this repo contains an initial step for the simulation in the platform created by Florian Wilk, but there are more project collaborators maintaining their own repos with different solutions:
+* Nicola Russo: https://github.com/nicrusso7/rex-gym
 
 ## Abstract:
 The SpotMicroAI project is designed to be a low cost, easily built quadruped robot. The design is roughly based off of Boston Dynamics quadruped robot SpotMini, though with obvious adaptations such as size and sensor suite.
