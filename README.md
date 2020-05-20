@@ -60,7 +60,8 @@ the software in this project is still very immature. Current experience has focu
 
 Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. Preliminary work in open AI gym has begun. There has also been discussion about using unity as a platform for reinforcement learning, in particular to be able to utilize the advanced graphics in the game engine for image recognition training on the RPi cam.
 
-There is also a first integration of ROS with a Gazebo simulation available in the Gazebo folder.
+There is also a first integration of ROS with a Gazebo simulation available in Joël's folder.
+
 ![PyBullet Simulation](Images/SpotMicroAI_pybullet_lidar3.png)
 
 ## Community:
