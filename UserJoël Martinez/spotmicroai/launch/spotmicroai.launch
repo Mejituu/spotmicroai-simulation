@@ -1,0 +1,12 @@
+<launch>
+
+<!-- launch legs nodes -->
+<node pkg="spotmicroai" name="Leg1" type="Leg.py" output="screen" args="_name:=front_right _number:=0"/>
+<node pkg="spotmicroai" name="Leg2" type="Leg.py" output="screen" args="_name:=front_left _number:=1"/>
+<node pkg="spotmicroai" name="Leg3" type="Leg.py" output="screen" args="_name:=rear_right _number:=2"/>
+<node pkg="spotmicroai" name="Leg4" type="Leg.py" output="screen" args="_name:=rear_left _number:=3"/>
+
+<!-- launch movement node-->
+<node pkg="spotmicroai" name="Movement" type="Sit.py" output="screen"/>
+
+</launch>
