@@ -1,4 +1,2 @@
-float64 Theta1
-float64 Theta2
-float64 Theta3 
+float64[3] Angles
 int8[4] Legs
