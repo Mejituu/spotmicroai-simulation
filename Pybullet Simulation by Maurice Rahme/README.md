@@ -2,26 +2,26 @@
 
 ## Spot Mini Mini
 
-![SIK](spot_bullet/media/spot-mini-mini.gif)
+![SIK](media/spot-mini-mini.gif)
 
 ### Kinematics and Gait:
 
 Pybullet Environment and body manipulation with leg IK from: https://www.researchgate.net/publication/320307716_Inverse_Kinematic_Analysis_Of_A_Quadruped_Robot
 
-![SIK](spot_bullet/media/spot_rpy.gif)
+![SIK](media/spot_rpy.gif)
 
 Open-Loop Gait using 12-Point Bezier Curves based on: https://dspace.mit.edu/handle/1721.1/98270
 
 Forward and Lateral Motion:
 
-![SLAT0](spot_bullet/media/spot_lat_logic.gif)
-<!-- ![SLAT1](spot_bullet/media/spot_lat_demo.gif) -->
+![SLAT0](media/spot_lat_logic.gif)
+<!-- ![SLAT1](media/spot_lat_demo.gif) -->
 
 
 Yaw logic based on 4-wheel steering car: http://www.inase.org/library/2014/santorini/bypaper/ROBCIRC/ROBCIRC-54.pdf
 
-![SYAW0](spot_bullet/media/spot_yaw_logic.gif)
-<!-- ![SYAW1](spot_bullet/media/spot_yaw_demo.gif) -->
+![SYAW0](media/spot_yaw_logic.gif)
+<!-- ![SYAW1](media/spot_yaw_demo.gif) -->
 
 
 ### Controls
@@ -68,15 +68,15 @@ Yaw In Place: Slightly push the `Right Stick` forward while pushing the `Left St
 #### Drift Correction
 I've found that the Bezier Curve gait lends itself well to optimization via RL. Notice that the open-loop forward command drifts significantly over time (rougly 1m per 2m forward):
 
-![DRIFT](spot_bullet/media/spot_drift.gif)
+![DRIFT](media/spot_drift.gif)
 
 With a one-dimensional action space [`Yaw Rate`], and a 16-dimensional observation space [`IMU Inputs` (8), `Leg Phases` (4), `Leg Contacts` (4)], an `Augmented Random Search` agent (linear) was able to correct the trajectory after 299 epochs:
 
-![NODRIFT](spot_bullet/media/spot_no_drift.gif)
+![NODRIFT](media/spot_no_drift.gif)
 
 Here is the policy output for this demo. It's clearly biased on one end to account for Spot's drift:
 
-![NODRIFTPOL](spot_bullet/media/spot_no_drift_action.png)
+![NODRIFTPOL](media/spot_no_drift_action.png)
 
 
 #### Stability on Difficult Terrain
@@ -86,11 +86,11 @@ Here, the action space is 14-dimensional, consisting of `Clearance Height` (1), 
 
 Before training, the robot falls almost immediately:
 
-![FALL](spot_bullet/media/spot_rough_falls.gif)
+![FALL](media/spot_rough_falls.gif)
 
 After training, the robot successfully navigates the terrain:
 
-![FALL](spot_bullet/media/spot_rough_ARS.gif)
+![FALL](media/spot_rough_ARS.gif)
 
 
 ## How To Run
@@ -125,15 +125,15 @@ Navigate to `spotmicro/heightfield.py` and take a look at `useProgrammatic` and 
 
 `useTerrainFromPNG`
 
-![PNGT](spot_bullet/media/spot_png_terrain.png)
+![PNGT](media/spot_png_terrain.png)
 
 `useProgrammatic`
 
-![PROGT](spot_bullet/media/spot_prog_terrain.png)
+![PROGT](media/spot_prog_terrain.png)
 
 With this terrain type, I programmed in a randomizer that triggers upon reset. This, along with the body randomizer from `Pybullet's Minitaur` increases your RL Policy's robustness.
 
-![RANDENV](spot_bullet/media/spot_random_terrain.gif)
+![RANDENV](media/spot_random_terrain.gif)
 
 #### Reinforcement Learning
 Go to `spot_bullet/src` and do `./spot_ars_eval.py`. When prompted, enter `#POLICY_NUMBER` (for example, 149 for the rough terrain example).
