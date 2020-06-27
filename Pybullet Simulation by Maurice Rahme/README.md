@@ -1,3 +1,5 @@
+# NOTE: This Simulation is hosted on GitHub: https://github.com/moribots/spot_mini_mini
+
 ## Spot Mini Mini
 
 ![SIK](spot_bullet/media/spot-mini-mini.gif)
