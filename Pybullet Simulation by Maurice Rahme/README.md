@@ -1,4 +1,4 @@
-# NOTE: This Simulation is hosted on GitHub: https://github.com/moribots/spot_mini_mini
+# NOTE This Simulation is hosted on GitHub: https://github.com/moribots/spot_mini_mini
 
 ## Pybullet Simulation with OpenAI Gym RL Environment
 
