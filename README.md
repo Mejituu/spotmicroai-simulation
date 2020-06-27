@@ -56,13 +56,11 @@ Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, a
 ## Software:
 ![ROS](Images/SpotMicroAI_rviz_urdf.png)
 
-the software in this project is still very immature. Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
+Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
 
-Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. Preliminary work in open AI gym has begun. There has also been discussion about using unity as a platform for reinforcement learning, in particular to be able to utilize the advanced graphics in the game engine for image recognition training on the RPi cam.
+Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. There is currently a working Bezier Gait Environment with Randomizable Body and Terrain Parameters in [Pybullet](https://github.com/moribots/spot_mini_mini). It has a variety of trained Reinforcement Learning Agents for gait correction and rough terrain traveral, as well as a ROS interface to operate the robot using a Joystick. You can navigate to `Pybullet Simulation by Maurice Rahme` for more [information]() and to be redirected to the relevant files.
 
 There is also a first integration of ROS with a Gazebo simulation available in Joël's folder.
-
-![PyBullet Simulation](Images/SpotMicroAI_pybullet_lidar3.png)
 
 ## Community:
 The primary community discussions take place on SpotMicro.org. The message boards there contain a repository of topics which span hardware and software.
