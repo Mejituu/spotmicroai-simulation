@@ -54,7 +54,7 @@ The brain of this project is designed to be powered by a Raspberry Pi 4. The Pi 
 Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, and several ultrasound sensors. Some users have also integrated a RPiLIDAR A1 into their build.
 
 ## Software:
-![Pybullet](https://github.com/moribots/spot_mini_mini)
+![Pybullet](Pybullet Simulation by Maurice Rahme/media/spot-mini-mini.gif)
 
 ![ROS](Images/SpotMicroAI_rviz_urdf.png)
 
