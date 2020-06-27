@@ -60,7 +60,7 @@ Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, a
 
 Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
 
-Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. There is currently a working Bezier Gait Environment with Randomizable Body and Terrain Parameters in [Pybullet](https://github.com/moribots/spot_mini_mini). It has a variety of trained Reinforcement Learning Agents for gait correction and rough terrain traveral, as well as a ROS interface to operate the robot using a Joystick. You can navigate to `Pybullet Simulation by Maurice Rahme` for more [information]() and to be redirected to the relevant files.
+Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. There is currently a working Bezier Gait Environment with Randomizable Body and Terrain Parameters in [Pybullet](https://github.com/moribots/spot_mini_mini). It has a variety of trained Reinforcement Learning Agents for gait correction and rough terrain traveral, as well as a ROS interface to operate the robot using a Joystick. You can navigate to `Pybullet Simulation by Maurice Rahme` for more [information](https://github.com/moribots/spot_mini_mini) and to be redirected to the relevant files.
 
 There is also a first integration of ROS with a Gazebo simulation available in Joël's folder.
 
