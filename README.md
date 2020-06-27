@@ -55,6 +55,7 @@ Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, a
 
 ## Software:
 ![Pybullet](https://github.com/moribots/spot_mini_mini)
+
 ![ROS](Images/SpotMicroAI_rviz_urdf.png)
 
 Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
