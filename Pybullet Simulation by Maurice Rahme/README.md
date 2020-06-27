@@ -51,15 +51,15 @@ Assuming you have a Logitech Gamepad F310:
 
 Changing `Step Velocity` while moving forward:
 
-![SVMOD](mini_ros/media/stepvel_mod.gif)
+![SVMOD](media/stepvel_mod.gif)
 
 Changing `Step Length` while moving forward:
 
-![SVMOD](mini_ros/media/steplen_mod.gif)
+![SVMOD](media/steplen_mod.gif)
 
 Yaw In Place: Slightly push the `Right Stick` forward while pushing the `Left Stick` maximally in either direction:
 
-![SVMOD](mini_ros/media/yaw_in_place.gif)
+![SVMOD](media/yaw_in_place.gif)
 
 
 
