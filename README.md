@@ -53,6 +53,12 @@ The brain of this project is designed to be powered by a Raspberry Pi 4. The Pi 
 
 Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, and several ultrasound sensors. Some users have also integrated a RPiLIDAR A1 into their build.
 
+A custom Power Distribution Board was developed for users with [single](https://github.com/moribots/spot_mini_mini/tree/spot/spot_real/PDB) or [dual](https://github.com/adham-elarabawy/OpenQuadruped/tree/master/hardware) power supplies.
+
+![SinglePDB](Pybullet Simulation by Maurice Rahme/media/singlePDB)
+![DualPDB](Pybullet Simulation by Maurice Rahme/media/dualPDB.jpg)
+
+
 ## Software:
 
 ![Pybullet](Pybullet Simulation by Maurice Rahme/media/spot-mini-mini.gif)
