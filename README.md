@@ -55,8 +55,8 @@ Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, a
 
 A custom Power Distribution Board was developed for users with [single](https://github.com/moribots/spot_mini_mini/tree/spot/spot_real/PDB) or [dual](https://github.com/adham-elarabawy/OpenQuadruped/tree/master/hardware) power supplies.
 
-![SinglePDB](Pybullet Simulation by Maurice Rahme/media/singlePDB)
-![DualPDB](Pybullet Simulation by Maurice Rahme/media/dualPDB.jpg)
+![SinglePDB](Pybullet Simulation by Maurice Rahme/media/singlePDB.png)
+![DualPDB](Pybullet Simulation by Maurice Rahme/media/dualPDB.png)
 
 
 ## Software:
