@@ -54,7 +54,7 @@ The brain of this project is designed to be powered by a Raspberry Pi 4. The Pi 
 Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, and several ultrasound sensors. Some users have also integrated a RPiLIDAR A1 into their build.
 
 ## Software:
-![Pybullet](https://gitlab.com/moribots/simulation/-/tree/master/Pybullet%20Simulation%20by%20Maurice%20Rahme)
+![Pybullet](https://github.com/moribots/spot_mini_mini)
 ![ROS](Images/SpotMicroAI_rviz_urdf.png)
 
 Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
