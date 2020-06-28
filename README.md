@@ -53,16 +53,22 @@ The brain of this project is designed to be powered by a Raspberry Pi 4. The Pi 
 
 Sensors include a raspberry pi camera, MPU6050 Gyro accelerometer combination, and several ultrasound sensors. Some users have also integrated a RPiLIDAR A1 into their build.
 
+A custom Power Distribution Board was developed for users with [single](https://github.com/moribots/spot_mini_mini/tree/spot/spot_real/PDB) or [dual](https://github.com/adham-elarabawy/OpenQuadruped/tree/master/hardware) power supplies. This power distribution board has a `1.5mm` Track Width to support up to `5.5A` at a 10C temperature increase (conservative estimate). There are also copper grounding planes on both sides of the board to help with heat dissipation, and parallel tracks for the power lines are provided for the same reason. The PDB also includes shunt capactiors for each servo motor to smooth out the power input. You are free to select your own capaciors as recommendations range from `100uF` to `470uF` depending on the motors. Make sure you use electrolytic capacitors. This board interfaces with a sensor array (used for foot sensors on this project) and contains two I2C terminals and a regulated 5V power rail. At the center of the board is a Teensy 4.0 which communicates with a Raspberry Pi over Serial to control the 12 servo motors and read the analogue sensors. The Teensy allows for motor speed control, but if you don't need this, it defaults at 100deg/sec (you can change this). The Gerber files for the single supply version are in this directory.
+
+<img src="Pybullet Simulation by Maurice Rahme/media/singlePDB.png" alt="SinglePDB" width="300"/>
+<img src="Pybullet Simulation by Maurice Rahme/media/dualPDB.png" alt="DualPDB" width="300"/>
+
 ## Software:
-![ROS](Images/SpotMicroAI_rviz_urdf.png)
 
-the software in this project is still very immature. Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gate for the robot and so work on other aspects such as navigation path planning but have not yet started.
+![Pybullet](Pybullet Simulation by Maurice Rahme/media/spot-mini-mini.gif)
 
-Current efforts to develop the gait through reinforcement learning have taken place in the PyBullet. Preliminary work in open AI gym has begun. There has also been discussion about using unity as a platform for reinforcement learning, in particular to be able to utilize the advanced graphics in the game engine for image recognition training on the RPi cam.
+<!-- ![ROS](Images/SpotMicroAI_rviz_urdf.png) -->
+
+Current experience has focused on running C++ directly on the Jetson and preliminary tests have occurred with robot operating system (ROS). The current work has focused on developing a robust gait for the robot and so work on other aspects such as navigation path planning but have not yet started.
+
+There is currently a working Bezier Gait Environment with Randomizable Body and Terrain Parameters in [Pybullet](https://github.com/moribots/spot_mini_mini). It has a variety of trained Reinforcement Learning Agents for gait correction and rough terrain traveral, as well as a ROS interface to operate the robot using a Joystick. You can navigate to `Pybullet Simulation by Maurice Rahme` for more [information](https://github.com/moribots/spot_mini_mini) and to be redirected to the relevant files.
 
 There is also a first integration of ROS with a Gazebo simulation available in Joël's folder.
-
-![PyBullet Simulation](Images/SpotMicroAI_pybullet_lidar3.png)
 
 ## Community:
 The primary community discussions take place on SpotMicro.org. The message boards there contain a repository of topics which span hardware and software.
