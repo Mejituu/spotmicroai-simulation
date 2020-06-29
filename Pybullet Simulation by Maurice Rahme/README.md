@@ -2,13 +2,13 @@
 
 ## Pybullet Simulation with OpenAI Gym RL Environment
 
-![SIK](spot_bullet/media/spot-mini-mini.gif)
+![SIK](media/spot-mini-mini.gif)
 
 ### Kinematics:
 
 Pybullet Environment and body manipulation with leg IK from: https://www.researchgate.net/publication/320307716_Inverse_Kinematic_Analysis_Of_A_Quadruped_Robot
 
-![SIK](spot_bullet/media/spot_rpy.gif)
+![SIK](media/spot_rpy.gif)
 
 ### Reinforcement Learning
 
@@ -19,24 +19,24 @@ Here, the action space is 14-dimensional, consisting of `Clearance Height` (1), 
 
 Before training, the robot falls almost immediately:
 
-![FALL](spot_bullet/media/spot_rough_falls.gif)
+![FALL](media/spot_rough_falls.gif)
 
 After training, the robot successfully navigates the terrain:
 
-![FALL](spot_bullet/media/spot_rough_ARS.gif)
+![FALL](media/spot_rough_ARS.gif)
 
 #### Drift Correction
 I've found that the Bezier Curve gait lends itself well to optimization via RL if I intentionally select sub-optimal gait parameters. Notice that the open-loop forward command drifts significantly over time (rougly 1m per 2m forward):
 
-![DRIFT](spot_bullet/media/spot_drift.gif)
+![DRIFT](media/spot_drift.gif)
 
 With a one-dimensional action space [`Yaw Rate`], and a 16-dimensional observation space [`IMU Inputs` (8), `Leg Phases` (4), `Leg Contacts` (4)], an `Augmented Random Search` agent (linear) was able to correct the trajectory after 299 epochs:
 
-![NODRIFT](spot_bullet/media/spot_no_drift.gif)
+![NODRIFT](media/spot_no_drift.gif)
 
 Here is the policy output for this demo. It's clearly biased on one end to account for Spot's drift:
 
-![NODRIFTPOL](spot_bullet/media/spot_no_drift_action.png)
+![NODRIFTPOL](media/spot_no_drift_action.png)
 
 ### Gait:
 
@@ -44,14 +44,14 @@ Open-Loop Gait using 12-Point Bezier Curves based on: https://dspace.mit.edu/han
 
 Forward and Lateral Motion:
 
-![SLAT0](spot_bullet/media/spot_lat_logic.gif)
-<!-- ![SLAT1](spot_bullet/media/spot_lat_demo.gif) -->
+![SLAT0](media/spot_lat_logic.gif)
+<!-- ![SLAT1](media/spot_lat_demo.gif) -->
 
 
 Yaw logic based on 4-wheel steering car: http://www.inase.org/library/2014/santorini/bypaper/ROBCIRC/ROBCIRC-54.pdf
 
-![SYAW0](spot_bullet/media/spot_yaw_logic.gif)
-<!-- ![SYAW1](spot_bullet/media/spot_yaw_demo.gif) -->
+![SYAW0](media/spot_yaw_logic.gif)
+<!-- ![SYAW1](media/spot_yaw_demo.gif) -->
 
 
 ### Controls
@@ -81,15 +81,15 @@ Assuming you have a Logitech Gamepad F310:
 
 Changing `Step Velocity` while moving forward:
 
-![SVMOD](mini_ros/media/stepvel_mod.gif)
+![SVMOD](media/stepvel_mod.gif)
 
 Changing `Step Length` while moving forward:
 
-![SVMOD](mini_ros/media/steplen_mod.gif)
+![SVMOD](media/steplen_mod.gif)
 
 Yaw In Place: Slightly push the `Right Stick` forward while pushing the `Left Stick` maximally in either direction:
 
-![SVMOD](mini_ros/media/yaw_in_place.gif)
+![SVMOD](media/yaw_in_place.gif)
 
 
 ## How To Run
@@ -116,7 +116,7 @@ You can ignore this msg: `[ERROR] [1591631380.406690714]: Couldn't open joystick
 
 **Non-Joystick Use**
 
-If you don't have a joystick, go to `spot_bullet/src` and do `./env_tester.py`. A Pybullet sim will open up for you with the same controls you would have on the joystick, except each is on its own scrollbar. You may also use the following optional arguments:
+If you don't have a joystick, go to `src` and do `./env_tester.py`. A Pybullet sim will open up for you with the same controls you would have on the joystick, except each is on its own scrollbar. You may also use the following optional arguments:
 
 ```
 -h, --help          show this help message and exit
@@ -128,7 +128,7 @@ If you don't have a joystick, go to `spot_bullet/src` and do `./env_tester.py`. 
 
 **Reinforcement Learning Agent Evaluation**
 
-Go to `spot_bullet/src` and do `./spot_ars_eval.py`. You may also use the following optional arguments. Note that if you don't use the `-a` argument, no agent will be loaded, so you will be using the open-loop policy. For example, if you enter `149` after `-a`, you will see the first successful policy, but if you enter `2229`, you will see a much more aggressive policy.
+Go to `src` and do `./spot_ars_eval.py`. You may also use the following optional arguments. Note that if you don't use the `-a` argument, no agent will be loaded, so you will be using the open-loop policy. For example, if you enter `149` after `-a`, you will see the first successful policy, but if you enter `2229`, you will see a much more aggressive policy.
 
 ```
 -h, --help          show this help message and exit
@@ -144,14 +144,14 @@ Navigate to `spotmicro/heightfield.py` and take a look at `useProgrammatic` and 
 
 `useTerrainFromPNG`
 
-![PNGT](spot_bullet/media/spot_png_terrain.png)
+![PNGT](media/spot_png_terrain.png)
 
 `useProgrammatic`
 
-![PROGT](spot_bullet/media/spot_prog_terrain.png)
+![PROGT](media/spot_prog_terrain.png)
 
 With this terrain type, I programmed in a randomizer that triggers upon reset. This, along with the body randomizer from `Pybullet's Minitaur` increases your RL Policy's robustness.
 
-![RANDENV](spot_bullet/media/spot_random_terrain.gif)
+![RANDENV](media/spot_random_terrain.gif)
 
 
